@@ -14,7 +14,7 @@
 109 RETURN - LINE 7
 ```
 
-- The Case of count being Minus and the log is **false Transaction mined but execution failed**
+- The Case of count being negative and the log is **false Transaction mined but execution failed**
 
 ```
 281 REVERT - LINE 15
