@@ -4,6 +4,7 @@ pragma solidity ^0.8.0;
 contract Token {
     string public name = "Jemerald";
     string public symbol = "JEM";
+    uint256 public decimal = 18;
 
     uint256 public totalSupply = 100000;
 
