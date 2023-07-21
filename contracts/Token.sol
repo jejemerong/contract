@@ -1,5 +1,6 @@
 //SPDX-License-Identifier: UNLICENSED
 pragma solidity ^0.8.0;
+import "hardhat/console.sol";
 
 contract Token {
     string public name = "Jemerald";
@@ -23,7 +24,12 @@ contract Token {
 
         balances[msg.sender] -= amount;
         balances[to] += amount;
-
+        console.log(
+        "Transferring from %s to %s %s tokens",
+        msg.sender,
+        to,
+        amount
+    );
         emit Transfer(msg.sender, to, amount); // 리턴 없이 이벤트 로깅만
     }
 

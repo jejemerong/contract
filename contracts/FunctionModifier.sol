@@ -30,7 +30,7 @@ contract FunctionModifier {
     modifier noReentrancy () {
         require(!locked, "No Entrency");
 
-        locked = true; // 얘는 굳이 왜 붙이는거?
+        locked = true; // 얘는 굳이 왜 붙이는거? -> undefined 일 수도 있어서?
         _;
         locked = false;
     }
