@@ -5,6 +5,10 @@
   "repository": "https://github.com/jejemerong/contract.git",
   "author": "jejemerong <9708jjw@gmail.com>",
   "license": "MIT",
+  "scripts": {
+    "test": "npx hardhat test",
+    "compile": "npx hardhat compile"
+  },
   "devDependencies": {
     "@nomicfoundation/hardhat-chai-matchers": "^2.0.1",
     "@nomicfoundation/hardhat-ethers": "^3.0.3",
