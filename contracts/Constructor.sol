@@ -34,3 +34,9 @@ contract D is X, Y {
 contract E is X, Y{
     constructor () Y("Input is YY") X("Input is XX") {}
 }
+
+contract F is X, Y {
+    constructor(string memory _text) X(_text) Y("Y"){
+        // TODO: 왜 calldata 는 안되고 memory 는 되는것인가
+    }
+}
