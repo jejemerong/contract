@@ -25,7 +25,8 @@ contract B is A {
 // 아니 근데 B 한테만 상속 받아도 되는 거 아닌가?
 // 왜 굳이 A, B 로 상속 받아야 하는 거지?
 contract C is A, B {
-    function foo() public pure override(A, B) returns(string memory) {
+    // 다른 컨트랙트에서 함수를 상속 받기 위해서는 virtual 명시 필요
+    function foo() public pure override virtual (A, B) returns(string memory) {
         return "C";
     }
 
@@ -34,3 +35,8 @@ contract C is A, B {
     }
 }
 
+contract D is B, C {
+    function foo() public pure override (B, C) returns(string memory) {
+        return super.foo();
+    }
+}
